@@ -47,7 +47,13 @@
 <div class="container">
     <div class="row">
         <div class="col-lg-5 mt-5">
-            <img src="Rush.png" class="img-fluid" alt="">
+        <?php
+            if(isset($_GET["img"])){
+             ?><img class="" width="100%" src="<?= $_GET["img"];?>" alt="">
+        <?php
+            }else{
+            ?><img width="100%" src="Rush.png" alt="">
+             <?php }?>
         </div>
         <div class="col-lg-7">
             <form action="Rizaldi_mybooking.php" method="GET">
