@@ -27,7 +27,7 @@
           <a class="nav-link" aria-current="page" href="Rizaldi_home.php">Home</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="Rizaldi_booking.php">Booking</a>
+          <a class="nav-link" href="Rizaldi_booking1.php">Booking</a>
         </li>
         <li class="nav-item">
           <a class="nav-link" href="Rizaldi_mybooking.php">MyBooking</a>
@@ -65,7 +65,7 @@
                   <li class="list-group-item text-primary">Manual</li>
                 </ul>
                 <div class="card-body text-center">
-                  <a href="Rizaldi_booking.php" class="btn btn-primary">Book now</a>
+                  <a href="Rizaldi_booking1.php" class="btn btn-primary">Book now</a>
                 </div>
             </div>
         </div>
