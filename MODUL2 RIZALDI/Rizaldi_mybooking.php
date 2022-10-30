@@ -23,7 +23,7 @@
           <a class="nav-link" href="Rizaldi_home.php">Home</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="Rizaldi_booking.php">Booking</a>
+          <a class="nav-link" href="Rizaldi_booking1.php">Booking</a>
         </li>
         <li class="nav-item">
           <a class="nav-link" aria-current="page" href="Rizaldi_mybooking.php">MyBooking</a>
