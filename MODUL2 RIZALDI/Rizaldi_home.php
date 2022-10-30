@@ -1,3 +1,28 @@
+<?php
+$mobil = [
+  [
+      
+      "img" => "Rush.png"
+  ],
+  [
+      
+      "img" => "Agya.png"
+  ],
+  [
+      
+      "img" => "Avanza.png"
+  ],
+]
+?>
+
+
+
+
+
+
+
+
+
 <!doctype html>
 <html lang="en">
 <head>
@@ -27,7 +52,7 @@
           <a class="nav-link" aria-current="page" href="Rizaldi_home.php">Home</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="Rizaldi_booking1.php">Booking</a>
+          <a class="nav-link" href="Rizaldi_booking.php">Booking</a>
         </li>
         <li class="nav-item">
           <a class="nav-link" href="Rizaldi_mybooking.php">MyBooking</a>
@@ -54,7 +79,7 @@
         <div class="col-4">
           
             <div class="card">
-                <img src="Rush.png" class="card-img-top" alt="Rush">
+                <img src="<?php echo $mobil[0]["img"];?>" class="card-img-top" alt="Rush">
                 <div class="card-body">
                   <h5 class="card-title">Toyota Rush</h5>
                   <p class="card-text">Rp.200.000/day</p>
@@ -65,13 +90,13 @@
                   <li class="list-group-item text-primary">Manual</li>
                 </ul>
                 <div class="card-body text-center">
-                  <a href="Rizaldi_booking1.php" class="btn btn-primary">Book now</a>
+                <button class="m-2 btn btn-primary" type="submit"><a href="Rizaldi_booking.php?img=<?= $mobil[0]["img"];?>" style="color:white">Book Now</a></button>
                 </div>
             </div>
         </div>
         <div class="col-4">
             <div class="card">
-                <img src="Agya.png" class="card-img-top" alt="Agya">
+                <img src="<?php echo $mobil[1]["img"]; ?>" alt="Agya">
                 <div class="card-body">
                   <h5 class="card-title">Toyota Agya</h5>
                   <p class="card-text">Rp.100.000/day</p>
@@ -82,13 +107,13 @@
                   <li class="list-group-item text-primary">Matic</li>
                 </ul>
                 <div class="card-body text-center">
-                  <a href="Rizaldi_booking2.php" class="btn btn-primary">Book now</a>
+                  <button class="m-2 btn btn-primary" type="submit"><a href="Rizaldi_booking.php?img=<?= $mobil[1]["img"];?>" style="color:white">Book Now</a></button>
                 </div>
             </div>
         </div>
         <div class="col-4">
             <div class="card">
-                <img src="Avanza.png" class="card-img-top" alt="Avanza">
+                <img src="<?php echo $mobil[2]["img"];?>" class="card-img-top" alt="Avanza">
                 <div class="card-body">
                   <h5 class="card-title">Toyota Avanza</h5>
                   <p class="card-text">Rp.150.000/day</p>
@@ -99,7 +124,7 @@
                   <li class="list-group-item text-primary" >Manual</li>
                 </ul>
                 <div class="card-body text-center">
-                  <a href="Rizaldi_booking3.php" class="btn btn-primary">Book now</a>                
+                <button class="m-2 btn btn-primary" type="submit"><a href="Rizaldi_booking.php?img=<?= $mobil[2]["img"];?>" style="color:white">Book Now</a></button>              
                 </div>
             </div>
 
