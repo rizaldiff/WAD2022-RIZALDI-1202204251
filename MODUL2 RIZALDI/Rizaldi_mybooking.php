@@ -25,9 +25,6 @@
         <li class="nav-item">
           <a class="nav-link" href="Rizaldi_booking.php">Booking</a>
         </li>
-        <li class="nav-item">
-          <a class="nav-link" aria-current="page" href="Rizaldi_mybooking.php">MyBooking</a>
-        </li>
       </ul>
     </div>
   </div>
