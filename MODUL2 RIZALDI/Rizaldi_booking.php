@@ -56,7 +56,7 @@
              <?php }?>
         </div>
         <div class="col-lg-7">
-            <form action="Rizaldi_mybooking.php" method="GET">
+            <form action="Rizaldi_mybooking.php" method="POST">
                 <div class="mb-2">
                     <label for="nama" class="form-label">Name</label>
                     <input readonly type="text" class="form-control" id="nama" name="nama" placeholder="" value="Rizaldi_1202204251">
@@ -88,19 +88,19 @@
                 <div class="mb-2">
                     <label for="servis">Add Services</label>
                     <div class="form-check">
-                        <input class="form-check-input" type="checkbox" value="Health protocol" name="plusservis">
+                        <input class="form-check-input" type="checkbox" value="Health protocol" name="plusservis[]">
                         <label class="form-check-label" >
                         Health protocol/Rp.25.000
                         </label>
                     </div>
                     <div class="form-check">
-                        <input class="form-check-input" type="checkbox" value="Driver" name="plusservis">
+                        <input class="form-check-input" type="checkbox" value="Driver" name="plusservis[]">
                         <label class="form-check-label">
                         Driver/Rp.100.000
                         </label>
                     </div>
                     <div class="form-check">
-                        <input class="form-check-input" type="checkbox" value="Fuel Filled" name="plusservis">
+                        <input class="form-check-input" type="checkbox" value="Fuel Filled" name="plusservis[]">
                         <label class="form-check-label">
                         Fuel Filled/Rp.250.000
                         </label>
