@@ -46,13 +46,13 @@
 <!-- EAD end -->
 <!-- Data -->
 <?php 
-  $nama = isset( $_GET['nama']) ?  $_GET['nama']: "";
-  $tanggal =isset( $_GET['tanggal']) ?  $_GET['tanggal']: "";
-  $jam = isset( $_GET['jam']) ?  $_GET['jam']: "";
-  $durasi = isset( $_GET['durasi']) ?  $_GET['durasi']: "";
-  $mobil = isset( $_GET['mobil']) ?  $_GET['mobil']: "";
-  $nomor =isset( $_GET['nomor']) ?  $_GET['nomor']: "";
-  $plusservis = isset( $_GET['plusservis']) ?  $_GET['plusservis']: "No Service";
+  $nama =  $_POST['nama'];
+  $tanggal =$_POST['tanggal'];
+  $jam =  $_POST['jam'];
+  $durasi = $_POST['durasi'];
+  $mobil = $_POST['mobil'];
+  $nomor = $_POST['nomor'];
+  $plusservis = $_POST['plusservis'];
   $checkout=date('Y-m-d',strtotime($tanggal . "+$durasi day"));
 
 
@@ -113,7 +113,16 @@
                     <td><?php echo $checkout."<br>" .$jam?></td>
                     <td><?php echo $mobil ?></td>
                     <td><?php echo $nomor ?></td>
-                    <td><?php echo $plusservis ?></td>                     
+                    <td><?php
+                              if(!empty($_POST['plusservis'])) {
+                              foreach($_POST['plusservis'] as $check) {
+                              echo $check . "<br>"; 
+                                 }
+                              }
+                              else{
+                                echo "no service";
+                              }
+                              ?> </td>                     
                     <td><?php echo "Rp".$total.".000" ?></td>
                 </tr>
             </tbody>
