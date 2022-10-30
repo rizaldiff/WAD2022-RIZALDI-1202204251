@@ -54,9 +54,6 @@ $mobil = [
         <li class="nav-item">
           <a class="nav-link" href="Rizaldi_booking.php">Booking</a>
         </li>
-        <li class="nav-item">
-          <a class="nav-link" href="Rizaldi_mybooking.php">MyBooking</a>
-        </li>
       </ul>
     </div>
   </div>
