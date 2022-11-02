@@ -55,7 +55,7 @@
                 <?php } ?>
             </div>
             <div class="col-lg-7">
-                <form action="Rizaldi_mybooking.php" method="GET">
+                <form action="Rizaldi_mybooking.php" method="POST">
                     <div class="mb-2">
                         <label for="nama" class="form-label">Name</label>
                         <input readonly type="text" class="form-control" id="nama" name="nama" placeholder="" value="Rizaldi_1202204251">

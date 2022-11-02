@@ -44,7 +44,7 @@
   </div>
   <!-- EAD end -->
   <!-- Data -->
-  <?
+<?php
   $nama =  $_POST['nama'];
   $tanggal = $_POST['tanggal'];
   $jam =  $_POST['jam'];

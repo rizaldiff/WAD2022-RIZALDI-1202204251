@@ -1,16 +1,16 @@
 <?php
-$$mobil = [
+$mobil = [
   [
 
-    "img" => "Rush.png"
+      "img" => "Rush.png"
   ],
   [
 
-    "img" => "Agya.png"
+      "img" => "Agya.png"
   ],
   [
 
-    "img" => "Avanza.png"
+      "img" => "Avanza.png"
   ],
 ]
 ?>
@@ -74,24 +74,24 @@ $$mobil = [
   <div class="container">
 
     <div class="row">
-      <div class="col-4">
-
-        <div class="card">
-          <img src="<?php echo $mobil[0]["img"]; ?>" class="card-img-top" alt="Rush">
-          <div class="card-body">
-            <h5 class="card-title">Toyota Rush</h5>
-            <p class="card-text">Rp.200.000/day</p>
-          </div>
-          <ul class="list-group list-group-flush text-center">
-            <li class="list-group-item text-primary">7 Kursi</li>
-            <li class="list-group-item text-primary">1500 CC</li>
-            <li class="list-group-item text-primary">Manual</li>
-          </ul>
-          <div class="card-body text-center">
-            <button class="m-2 btn btn-primary" type="submit"><a href="Rizaldi_booking.php?img=<?= $mobil[0]["img"]; ?>" style="color:white">Book Now</a></button>
-          </div>
+        <div class="col-4">
+          
+            <div class="card">
+                <img src=<?php echo $mobil[0]["img"];?> class="card-img-top" alt="Rush">
+                <div class="card-body">
+                  <h5 class="card-title">Toyota Rush</h5>
+                  <p class="card-text">Rp.200.000/day</p>
+                </div>
+                <ul class="list-group list-group-flush text-center">
+                  <li class="list-group-item text-primary">7 Kursi</li>
+                  <li class="list-group-item text-primary">1500 CC</li>
+                  <li class="list-group-item text-primary">Manual</li>
+                </ul>
+                <div class="card-body text-center">
+                <button class="m-2 btn btn-primary" type="submit"><a href="Rizaldi_booking.php?img=<?= $mobil[0]["img"];?>" style="color:white">Book Now</a></button>
+                </div>
+            </div>
         </div>
-      </div>
       <div class="col-4">
         <div class="card">
           <img src="<?php echo $mobil[1]["img"]; ?>" alt="Agya">
