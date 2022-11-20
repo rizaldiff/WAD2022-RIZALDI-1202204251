@@ -20,10 +20,10 @@
     <div class="collapse navbar-collapse justify-content-center" id="navbarNav">
       <ul class="navbar-nav">
         <li class="nav-item">
-          <a class="nav-link" aria-current="page" href="#">Home</a>
+          <a class="nav-link" aria-current="page" href="Home-Rizaldi.php">Home</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="#">My Car</a>
+          <a class="nav-link" href="Add-Rizaldi.php">My Car</a>
         </li>
       </ul>
     </div>

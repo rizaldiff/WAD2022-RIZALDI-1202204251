@@ -20,7 +20,7 @@
     <div class="collapse navbar-collapse justify-content-center" id="navbarNav">
       <ul class="navbar-nav">
         <li class="nav-item">
-          <a class="nav-link" aria-current="page" href="Home-Rizaldi">Home</a>
+          <a class="nav-link" aria-current="page" href="Home-Rizaldi.php">Home</a>
         </li>
         <li class="nav-item">
           <a class="nav-link" href="Add-Rizaldi.php">My Car</a>
@@ -33,7 +33,10 @@
 <!-- Container -->
 
 <div class="container">
-  
+    <div class="row mt-5">
+      <h1> Detail </h1>
+      <p> Detail Mobil Rush</p>
+    </div>
     <div class="row" style="padding-top: 60px ;" >
       <div class="col-6" >
            <img src="Rush.png" alt="" width="100%">
@@ -80,7 +83,7 @@
                 </div>
                     
             </div>
-            <input type="submit" class= "btn btn-primary" value="Edit">
+            <button class="m-2 btn btn-primary"><a href="Edit-Rizaldi.php"> Edit </a></button>
         </form>
       </div>
     </div>

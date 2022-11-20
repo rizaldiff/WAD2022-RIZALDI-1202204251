@@ -20,10 +20,10 @@
     <div class="collapse navbar-collapse justify-content-center" id="navbarNav">
       <ul class="navbar-nav">
         <li class="nav-item">
-          <a class="nav-link" aria-current="page" href="#">Home</a>
+          <a class="nav-link" aria-current="page" href="Home-Rizaldi.php">Home</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="#">My Car</a>
+          <a class="nav-link" href="ListCar-Rizaldi.php">My Car</a>
         </li>
       </ul>
     </div>
@@ -32,7 +32,7 @@
 <!-- Navbar end -->
 <!-- Container -->
 <div class="container">
-    <div class="row mt-3">
+    <div class="row mt-5">
       <h1>Edit</h1>
       <p>Edit Mobil Rush</p>
     </div>
@@ -42,7 +42,7 @@
         
       </div>
       <div class="col-6">
-        <form action="Edit.php" method="POST">
+        <form action="#" method="POST">
             <div class="mb-2">
                 <label for="mobil" class="form-label">Nama Mobil</label>
                  <input type="text" class="form-control" id="mobil" name="mobil" placeholder="" value="">
