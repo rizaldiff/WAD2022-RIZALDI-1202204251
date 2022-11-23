@@ -33,7 +33,7 @@
   </nav>
   <!-- Navbar end -->
   <?php include('connector.php');
-  $querry = mysqli_query($conn, "SELECT * FROM showroom_rizaldi_table");
+  $query = mysqli_query($conn, "SELECT * FROM showroom_rizaldi_table");
   $row_query = mysqli_fetch_array($query);
   ?>
   <!-- Detail -->

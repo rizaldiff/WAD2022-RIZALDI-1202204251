@@ -1,4 +1,5 @@
 <?php
+include('connector.php');
 if (isset($_POST['edit'])) {
 }
 

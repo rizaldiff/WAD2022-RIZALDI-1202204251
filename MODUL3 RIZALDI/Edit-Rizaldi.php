@@ -33,8 +33,8 @@
   </nav>
   <!-- Navbar end -->
   <?php include('connector.php');
-  $query = mysqli_query($conn, "SELECT * FROM showroom_rizaldi_table");
-  $row_query = mysqli_fetch_array($query);
+    $query = mysqli_query($conn, "SELECT * FROM showroom_rizaldi_table");
+    $row_query = mysqli_fetch_array($query);
   ?>
 
   <h3 style="margin-left: 200px;"><b><?php echo $row_query['nama_mobil'] ?></b></h3>
