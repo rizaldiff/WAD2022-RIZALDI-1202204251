@@ -1,18 +1,25 @@
 <?php
     include('connector.php');
-    $mobil = $_POST ['mobil'];
-    $nama  = $_POST ['nama'];
-    $merk = $_POST ['merk'];
-    $tanggal= $_POST ['tanggal'];
-    $desk= $_POST ['desk'];
-    $query = mysqli_query($connect, "INSERT INTO showroom_rizaldi_table (nama_mobil,pemilik_mobil,merk_mobil,tanggal_beli,deskripsi)
-                                    VALUES('$mobil','$nama','$merk','$tanggal','$desk')");
-
+    $id_mobil = $_POST ['id_mobil'];
+    $nama_mobil = $_POST ['nama_mobil'];
+    $pemilik_mobil = $_POST ['pemilik_mobil'];
+    $merk_mobil = $_POST ['merk_mobil'];
+    $tanggal_beli = $_POST ['tanggal_beli'];
+    $deskripsi = $_POST ['deskripsi'];
+    $foto_mobil = $_POST ['foto_mobil'];
+    $status_pembayaran = $_POST ['status_pembayaran'];
+    
+    $query = mysqli_query($conn, "INSERT INTO showroom_rizaldi_table (id_mobil, nama_mobil, pemilik_mobil, merk_mobil, tanggal_beli, deskripsi, foto_mobil,
+                                            status_pembayaran) VALUES('$id_mobil', '$nama_mobil','$pemilik_mobil','$merk_mobil','$tanggal_beli','$deskripsi',
+                                            '$foto_mobil','$status_pembayaran')");
     if($query) {
-        echo "<script>alert('Data telah ditambahkan')</script>";
-        echo "<meta http-equiv='refresh' content='1 url=Add-Rizaldi.php'>";
-    }else{
-        echo "<script>alert('Gagal ditambahkan')</script>";
-        echo "<meta http-equiv='refresh' content='1 url=Add-Rizaldi.php'>"; 
+        echo "<script>alert('Data telah ditambahkan')
+            document.location='Detail-Rizaldi.php';
+            </script>";
+    } else {
+        echo "<script>alert('Gagal ditambahkan')
+            document.location='ListCar-Rizaldi.php';
+            </script>";
     }
+
 ?>

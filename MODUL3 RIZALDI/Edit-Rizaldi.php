@@ -23,70 +23,80 @@
           <a class="nav-link" aria-current="page" href="Home-Rizaldi.php">Home</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="ListCar-Rizaldi.php">My Car</a>
+          <a class="nav-link" href="Add-Rizaldi.php">My Car</a>
         </li>
       </ul>
     </div>
   </div>
 </nav>
 <!-- Navbar end -->
-<!-- Container -->
-<div class="container">
-    <div class="row mt-5">
-      <h1>Edit</h1>
-      <p>Edit Mobil Rush</p>
-    </div>
-    <div class="row" style="padding-top: 60px ;" >
+<?php include('connector.php');
+        $query = mysqli_query($conn, "SELECT * FROM showroom_rizaldi_table");
+        $row_query = mysqli_fetch_array($query);
+        ?>
+
+<h3 style="margin-left: 200px;"><b><?php echo $row_query['nama_mobil'] ?></b></h3>
+<h10 style="margin-left: 200px;color:grey">Edit Mobil <?php echo $row_query['nama_mobil'] ?></h10>
+<!-- Show Detail  -->
+<div class="row" style="padding-top: 60px ;" >
       <div class="col-6" >
-           <img src="Rush.png" alt="" width="100%">
-        
+        <img src=<?php echo $row_query['foto_mobil'];?>>
       </div>
       <div class="col-6">
-        <form action="#" method="POST">
-            <div class="mb-2">
-                <label for="mobil" class="form-label">Nama Mobil</label>
-                 <input type="text" class="form-control" id="mobil" name="mobil" placeholder="" value="">
-            </div>
-            <div class="mb-2">
-                <label for="nama" class="form-label">Nama Pemilik</label>
-                 <input type="text" class="form-control" id="nama" name="nama" placeholder="" value="">
-            </div>
-            <div class="mb-2">
-                <label for="merk" class="form-label">Merk</label>
-                 <input type="text" class="form-control" id="merk" name="merk" placeholder="" value="">
-            </div>
-            <div class="mb-2">
-                <label for="tanggal" class="form-label">Tanggal beli</label>
-                <input type="date" class="form-control" id="tanggal" name="tanggal">
-            </div>
-            <div class="mb-2">
-                <label for="deskripsi" class="form-label">Deskripsi</label>
-                <textarea class="form-control" id="deskripsi" rows="3"></textarea>
-            </div>
-            <div class="mb-2">
-                    <label for="formFile" class="form-label">Foto</label>
-                    <input class="form-control" type="file" id="formFile">
-            </div>
-            <div class="mt-5"> Status Pembayaran
-                <div class="form-check mt-2">
-                    <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault1">
-                    <label class="form-check-label" for="flexRadioDefault1">
-                     Lunas
-                    </label>
-                </div>
-            <div class="form-check mb-2">
-                    <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault2" checked>
-                    <label class="form-check-label" for="flexRadioDefault2">
-                    Belum lunas
-                    </label>
-                </div>
-                    
-            </div>
-            <input type="submit" class= "btn btn-primary" value="Simpan">
-        </form>
+      <form action="edit.php" method="POST">
+                            <div class="mb-3">
+                                <input type="hidden" id="id_mobil" name="id_mobil" value="<?=$row_query['id_mobil']?>">
+                            </div>
+                            <div class="mb-3">
+                                <label for="nama_mobil" class="form-label"><b>Nama Mobil<b></label>
+                                <input type="text" class="form-control" id="nama_mobil" name="nama_mobil" value="<?php echo $row_query['nama_mobil'] ?>">
+                            </div>
+                            <div class="mb-3">
+                                <label for="pemilik_mobil" class="form-label"><b>Nama Pemilik<b></label>
+                                <input type="text" class="form-control" id="pemilik_mobil" name="pemilik_mobil" value="<?php echo $row_query['pemilik_mobil'] ?>">
+                            </div>
+                            <div class="mb-3">
+                                <label for="merk_mobil" class="form-label"><b>Merk</b></label>
+                                <input type="text" class="form-control" id="merk_mobil" name="merk_mobil" value="<?php echo $row_query['merk_mobil'] ?>">
+                            </div>
+
+                            <div class="mb-3">
+                                <label for="tanggal_beli" class="form-label">Tanggal Beli</label>
+                                <input type="date" class="form-control" id="tanggal_beli" name="tanggal_beli" value="<?php echo $row_query['tanggal_beli'] ?>">
+                            </div>
+
+                            <div class="mb-3">
+                                <label for="deskripsi" class="form-label">Deskripsi</label>
+                                <textarea type="text" class="form-control" id="deskripsi" name="deskripsi" rows="8"><?php echo $row_query['deskripsi'] ?></textarea>
+                            </div>
+
+                            <div class="mb-3">
+                                <label for="foto_mobil" class="form-label"><b>Foto</b></label>
+                                <input class="form-control" type="file" id="foto_mobil" name="foto_mobil" value="<?= $row_query["foto_mobil"] ?>">
+                            </div>
+
+                            <div class="mb-5">
+                                <div>            
+                                    <label for="status_pembayaran" class="form-label"><b>Status Pembayaran<b></label>
+                                </div>
+                                <div class="form-check form-check-inline">
+                                    <input class="form-check-input" type="radio" name="status_pembayaran" id="lunas" value="lunas" <?php if($row_query['status_pembayaran']=='lunas') echo 'checked'?>>
+                                    <label class="form-check-label" for="lunas">Lunas</label>
+                                </div>
+                                <div class="form-check form-check-inline">
+                                    <input class="form-check-input" type="radio" name="status_pembayaran" id="belumlunas" value="belum lunas" <?php if($row_query['status_pembayaran']=='belum lunas') echo 'checked'?>>
+                                    <label class="form-check-label" for="belumlunas">Belum Lunas</label>
+                                </div>
+                            </div>
+
+                            <div class="mb-3">
+                                <div>
+                                    <button type="submit" class="btn btn-primary" value="edit" name="edit" style="width: 120px; height:40px">Edit</button>
+                                </div> 
+                            </div>
+                        </form>
       </div>
-    </div>
-  </div>
-  <!-- Cointainer end -->
+</div>
+<!-- Show Detail end -->
 </body>
 </html>

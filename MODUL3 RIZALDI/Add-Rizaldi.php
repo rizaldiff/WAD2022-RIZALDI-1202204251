@@ -23,7 +23,7 @@
           <a class="nav-link" aria-current="page" href="Home-Rizaldi.php">Home</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="#">My Car</a>
+          <a class="nav-link" href="Add-Rizaldi.php">My Car</a>
         </li>
       </ul>
     </div>
@@ -39,48 +39,62 @@
         </div>
     </div>
     <div class="row">
-        <form action="insert.php" method="POST">
-            <div class="mb-2">
-                <label for="mobil" class="form-label">Nama Mobil</label>
-                 <input type="text" class="form-control" id="mobil" name="mobil" placeholder="" value="">
-            </div>
-            <div class="mb-2">
-                <label for="nama" class="form-label">Nama Pemilik</label>
-                 <input type="text" class="form-control" id="nama" name="nama" placeholder="" value="">
-            </div>
-            <div class="mb-2">
-                <label for="merk" class="form-label">Merk</label>
-                 <input type="text" class="form-control" id="merk" name="merk" placeholder="" value="">
-            </div>
-            <div class="mb-2">
-                <label for="tanggal" class="form-label">Tanggal beli</label>
-                <input type="date" class="form-control" id="tanggal" name="tanggal">
-            </div>
-            <div class="mb-2">
-                <label for="desk" class="form-label">Deskripsi</label>
-                <input type="text" class="form-control" id="des" name="desk" rows="3">
-            </div>
-            <div class="mb-2">
-                    <label for="formFile" class="form-label">Foto</label>
-                    <input class="form-control" type="file" id="formFile">
-            </div>
-            <div class="mt-5"> Status Pembayaran
-                <div class="form-check mt-2">
-                    <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault1">
-                    <label class="form-check-label" for="flexRadioDefault1">
-                     Lunas
-                    </label>
+    <div class="col-9" style="margin-left: 200px;">
+            <form action="insert.php" method="POST" style="margin-right: 100px;">
+                <div class="mb-3">
+                    <input type="hidden" id="id_mobil" name="id_mobil">
                 </div>
-            <div class="form-check mb-2">
-                    <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault2" checked>
-                    <label class="form-check-label" for="flexRadioDefault2">
-                    Belum lunas
-                    </label>
+                <div class="mb-3">
+                    <label for="nama_mobil" class="form-label"><b>Nama Mobil<b></label>
+                    <input type="text" class="form-control" id="nama_mobil" name="nama_mobil" placeholder="Toyota Rush">
                 </div>
-                    
+
+                <div class="mb-3">
+                    <label for="pemilik_mobil" class="form-label"><b>Nama Pemilik<b></label>
+                    <input type="text" class="form-control" id="pemilik_mobil" name="pemilik_mobil" placeholder="Rizaldi - 1202204251">
+                </div>
+
+                <div class="mb-3">
+                    <label for="merk_mobil" class="form-label"><b>Merk</b></label>
+                    <input type="text" class="form-control" id="merk_mobil" name="merk_mobil" placeholder="Rush">
+                </div>
+
+                <div class="mb-3">
+                    <label for="tanggal_beli" class="form-label">Tanggal Beli</label>
+                    <input type="date" class="form-control" id="tanggal_beli" name="tanggal_beli" placeholder="11/12/2022">
+                </div>
+
+            <div class="mb-3">
+                <label for="deskripsi" class="form-label">Deskripsi</label>
+                <textarea type="text" class="form-control" id="deskripsi" name="deskripsi" rows="7"></textarea>
             </div>
-            <input type="submit" class= "btn btn-primary" value="selesai">
+
+            <div class="mb-3">
+                <label for="foto_mobil" class="form-label"><b>Foto</b></label>
+                <input class="form-control" type="file" id="foto_mobil" name="foto_mobil" placeholder="">
+            </div>
+
+            <div class="mb-5">
+                <div>            
+                    <label for="status_pembayaran" class="form-label"><b>Status Pembayaran<b></label>
+                </div>
+                <div class="form-check form-check-inline">
+                    <input class="form-check-input" type="radio" name="status_pembayaran" id="lunas" value="lunas">
+                    <label class="form-check-label" for="lunas">Lunas</label>
+                </div>
+                <div class="form-check form-check-inline">
+                    <input class="form-check-input" type="radio" name="status_pembayaran" id="belumlunas" value="belum lunas">
+                    <label class="form-check-label" for="belumlunas">Belum Lunas</label>
+                </div>
+            </div>
+
+            <div class="mb-3">
+                <div>
+                    <button type="submit" class="btn btn-primary" value="selesai" style="width: 120px; height:40px">Selesai</button>
+                </div>
+            </div>
         </form>
+    </div>
     </div>
 </div>
 <!-- form end -->

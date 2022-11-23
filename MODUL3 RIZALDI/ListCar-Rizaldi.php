@@ -1,3 +1,8 @@
+<?php
+  include('connector.php');
+?>
+
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -30,5 +35,54 @@
   </div>
 </nav>
 <!-- Navbar end -->
+<?php include('connector.php');
+        $query = mysqli_query($conn, "SELECT * FROM showroom_rizaldi_table");
+        $row_query = mysqli_fetch_array($query);
+        ?>
+        <h3 style="margin-left: 450px;"><b>My Show Room</b></h3>
+        <h10 style="margin-left: 450px;color:grey">List Show Room <?php echo $row_query['pemilik_mobil'] ?></h10>
+<!-- Card -->
+        <div class="card-group" style="margin-left: 460px">
+            <div class="row row-cols-2 row-cols-md-3 g-4" style="margin-right: 100px;"> 
+                <div class="card" style="width: 450px; height: 500px;color:white">
+                    <center><img src=<?php echo $row_query['foto_mobil'];?> style="width:97%; margin-top:20px" class="card-img" ></center>
+                    <div class="card-body">
+                        <h2 style="color:black"><b><?php echo $row_query['nama_mobil'] ?></b></h2>
+                        <h7 style="color:grey"><?php echo $row_query['deskripsi'] ?></h7>
+                            <pre></pre><pre></pre>
+                        <a href="Detail-Rizaldi.php" class="btn btn-primary rounded-5" role="button" style="width: 150px; height:40px; margin-right:20px">Detail</a>
+                        <a class="btn btn-danger rounded-5" role="button" style="width: 150px; height:40px">Delete</a>
+                    </div>
+                </div>
+            </div>
+            <div class="row row-cols-2 row-cols-md-3 g-4" style="margin-right: 30px;"> 
+                <div class="card" style="width: 450px; height: 500px;color:white">
+                    <center><img src="https://store.sirclo.com/blog/wp-content/uploads/2022/03/eco-racing-1.jpg" style="width:97%; margin-top:20px" class="card-img" ></center>
+                    <div class="card-body">
+                        <h2 style="color:black"><b>Mobil 2</b></h2>
+                        <h7 style="color:grey"> <?php echo $row_query['deskripsi'] ?></h7>
+                            <pre></pre><pre></pre>
+                        <a href="Detail-Amanda.php" class="btn btn-primary rounded-5" role="button" style="width: 150px; height:40px; margin-right:20px">Detail</a>
+                        <a class="btn btn-danger rounded-5" role="button" style="width: 150px; height:40px">Delete</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <br><br>
+        <div class="card-group" style="margin-left: 460px; margin-right: 100px;">
+            <div class="row row-cols-2 row-cols-md-3 g-4" style="margin-right: 30px;"> 
+                <div class="card" style="width: 450px; height: 500px;color:white">
+                    <center><img src="https://cdn02.indozone.id/local/5e5389c66a8f6.jpg" style="width:97%; margin-top:20px" class="card-img" ></center>
+                    <div class="card-body">
+                        <h2 style="color:black"><b>Mobil 3</b></h2>
+                        <h7 style="color:grey"><?php echo $row_query['deskripsi'] ?></h7>
+                            <pre></pre><pre></pre>
+                        <a href="Detail-Amanda.php" class="btn btn-primary rounded-5" role="button" style="width: 150px; height:40px; margin-right:20px">Detail</a>
+                        <a class="btn btn-danger rounded-5" role="button" style="width: 150px; height:40px">Delete</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+<!-- Card end -->
 </body>
 </html>
