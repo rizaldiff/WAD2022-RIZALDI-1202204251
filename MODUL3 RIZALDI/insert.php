@@ -1,6 +1,6 @@
 <?php
     include('connector.php');
-    $id_mobil = $_POST ['id'];
+    $id_mobil = $_POST ['id_mobil'];
     $nama_mobil = $_POST ['nama_mobil'];
     $pemilik_mobil = $_POST ['pemilik_mobil'];
     $merk_mobil = $_POST ['merk_mobil'];
