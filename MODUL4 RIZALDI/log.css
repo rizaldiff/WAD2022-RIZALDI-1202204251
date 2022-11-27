@@ -1,0 +1,62 @@
+*{
+    font-family: 'Raleway', sans-serif;
+}
+
+body{
+    position: sticky;
+}
+
+
+.login{
+    height: 100vh;
+}
+
+.header h1{
+    font-style: normal;
+    font-weight: 700;
+    font-size: 40px;
+    line-height: 47px;
+    /* identical to box height */
+
+    display: flex;
+    align-items: center;
+    letter-spacing: 0.2px;
+
+    color: #000000;
+}
+
+.formm label{
+   
+    font-style: normal;
+    font-weight: 400;
+    font-size: 20px;
+    line-height: 23px;
+    display: flex;
+    align-items: center;
+    letter-spacing: 0.2px;
+
+    color: #000000;
+
+}
+
+.formm a {
+   
+    
+    font-style: normal;
+    font-weight: 400;
+    font-size: 20px;
+    line-height: 23px;
+   
+    color: #1148D5;
+      
+}
+
+.formm span{
+    margin-top: 1px;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 20px;
+    line-height: 23px;
+
+    color: #000000;
+}

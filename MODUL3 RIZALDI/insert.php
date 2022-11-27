@@ -21,3 +21,5 @@
             document.location='ListCar-Rizaldi.php';
             </script>";
     }
+?>
+
