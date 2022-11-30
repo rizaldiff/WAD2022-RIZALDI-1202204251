@@ -14,7 +14,7 @@ if(isset($_SESSION['login'])){
 
 require 'config/function.php';
 
-if (isset($_POST['login'])){
+if (!isset($_POST['login'])){
     
     $email = $_POST['email'];
     $password = $_POST['password'];
