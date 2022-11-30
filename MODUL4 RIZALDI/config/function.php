@@ -14,7 +14,8 @@
 
 
 
-function registrasi($datas){
+function registrasi($data){
+    global $conn;
 
     $email = htmlspecialchars($data['email']);
     $nama = htmlspecialchars($data['nama']);

@@ -20,7 +20,7 @@ if (isset($_SESSION["login"])) {
 
 if (isset($_POST["update"])) {
     $email = $_POST["email"];
-    $nama = $_POST["nama"];
+    $nama = $_POST["nama"]; 
     $no_hp = $_POST["no_hp"];
     $password = mysqli_real_escape_string($conn, $_POST["password"]);
     $konfirmasi_password = mysqli_real_escape_string($conn, $_POST["password2"]);

@@ -54,7 +54,7 @@ require 'config/function.php';
     Rizaldi
   </button>
   <ul class="dropdown-menu">
-    <li><a class="dropdown-item" href="Profle-Rizaldi.php">Profile</a></li>
+    <li><a class="dropdown-item" href="Profile-Rizaldi.php">Profile</a></li>
     <li><hr class="dropdown-divider"></li>
     <li><a class="dropdown-item" href="Logout.php">Log Out</a></li>
   </ul>

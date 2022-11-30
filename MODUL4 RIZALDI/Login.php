@@ -4,8 +4,6 @@ session_start();
 
 
 
-
-
 if(isset($_SESSION['login'])){
     header("Location: Home-Rizaldi.php");
     exit;
@@ -14,7 +12,7 @@ if(isset($_SESSION['login'])){
 
 require 'config/function.php';
 
-if (!isset($_POST['login'])){
+if (isset($_POST['login'])){
     
     $email = $_POST['email'];
     $password = $_POST['password'];
