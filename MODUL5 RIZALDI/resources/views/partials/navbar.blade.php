@@ -18,10 +18,10 @@
 
           <ul class="navbar-nav ms-auto">
                 @auth
-                <a href="/create-car" class="nav-link bg-light text-primary mx-3">Add Car</a>
-                  <li class="nav-item dropdown">
-                    <a class="nav-link dropdown-toggle ml-3 bg-light text-primary" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                      Halo , {{ auth()->user()->name }}
+                <a href="/create-car" class="nav-link bg-light text-primary mx-3" style="border-radius:5px">Add Car</a>
+                  <li class="nav-item dropdown" >
+                    <a class="nav-link dropdown-toggle ml-2 bg-light text-primary"   href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false" style="border-radius:5px">
+                      {{ auth()->user()->name }}
                     </a>
                     <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
                       <li><a class="dropdown-item" href="/profile/{{ auth()->user()->id }}"><i class="bi bi-person-fill-gear text-primary"></i> My Profile</a></li>

@@ -36,7 +36,7 @@
           </div>
           <div class="mb-3">
              <span class="text-secondary fw-bold">Deskripsi</span>
-             <textarea class="form-control" name="description" placeholder="Jelasin mobilnya speknya kaya gimana.."></textarea>
+             <textarea class="form-control" name="description" placeholder="Masukkan deskripsi..."></textarea>
           </div>
           <div class="mb-3">
              <span class="text-secondary fw-bold">Foto</span>
