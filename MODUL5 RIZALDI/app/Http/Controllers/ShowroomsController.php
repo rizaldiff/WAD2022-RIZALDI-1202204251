@@ -3,7 +3,6 @@
 namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use App\Models\Product;
-use App\Models\User;
 use Illuminate\Support\Facades\DB;
 use Illuminate\Support\Facades\Storage;
 
@@ -31,7 +30,7 @@ class ShowroomsController extends Controller
      */
     public function create()
     {
-        $userid = User::all();
+        $userId = User::all();
 
         return view('showrooms.create', ['title' => 'Add','status'=>Product::all()], compact('userid'));
 
